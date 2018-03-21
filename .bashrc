@@ -25,7 +25,8 @@ export SPARK_HOME="/usr/lib/spark"
 export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
 export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.3-src.zip:$PYTHONPATH
 
-export PYSPARK_SUBMIT_ARGS='--master yarn --conf spark.serializer=org.apache.spark.serializer.KryoSerializer --executor-memory 12558m --executor-cores 4 --driver-java-options -Dlog4j.configuration=file:///usr/lib/spark/conf/log4j.properties --conf spark.default.parallelism=42 --conf spark.driver.memory=10g --conf spark.memory.storageFraction=0.25 --conf spark.memory.fraction=0.8 --conf spark.driver.maxResultSize=2g --conf spark.shuffle.spill=true --conf spark.broadcast.blockSize=512m --conf spark.sql.autoBroadcastJoinThreshold=-1 --conf spark.yarn.executor.memoryOverhead=2584 --conf spark.sql.shuffle.partitions=1000 --conf spark.yarn.driver.memoryOverhead=2584 --conf spark.akka.frameSize=256 --conf spark.kryoserializer.buffer.max=256m '
+export PYSPARK_SUBMIT_ARGS='--master yarn --conf spark.serializer=org.apache.spark.serializer.KryoSerializer --executor-memory 12558m --executor-cores 4 --driver-java-options -Dlog4j.configuration=file:///usr/lib/spark/conf/log4j.properties --conf spark.default.parallelism=42 --conf spark.driver.memory=10g --conf spark.memory.storageFraction=0.25 --conf spark.memory.fraction=0.8 --conf spark.driver.maxResultSize=2g --conf spark.shuffle.spill=true --conf spark.broadcast.blockSize=512m --conf spark.sql.autoBroadcastJoinThreshold=-1 --conf spark.yarn.executor.memoryOverhead=2584 --conf spark.sql.shuffle.partitions=1000 --conf spark.yarn.driver.memoryOverhead=2584 --conf spark.akka.frameSize=256 --conf spark.kryoserializer.buffer.max=256m pyspark-shell'
+alias notebook='ipython notebook --profile=pyspark'
 
 # Left over spark configs
 # spark.driver.cores=6  spark.default.parallelism=2388  spark.yarn.maxAppAttempts=1  spark.yarn.submit.waitAppCompletion=false spark.io.compression.codec=lz4 spark.memory.useLegacyMode=false
