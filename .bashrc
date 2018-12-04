@@ -28,6 +28,8 @@ export PYSPARK_SUBMIT_ARGS='--master yarn --conf spark.serializer=org.apache.spa
 alias notebook='ipython notebook --no-browser --port 8889 --profile=pyspark'
 alias port_forwarding='gcloud compute ssh --internal-ip iap-promo-m -- -L 8889:localhost:8889'
 alias port_forwarding2='gcloud compute ssh --internal-ip iap-promo-m -- -D 1080 -N'
+alias upload='gsutil -m rsync -r /home/jun-won/ipython gs://unity-ads-ds-prd-users/junwon/ipython'
+alias download='gsutil -m rsync -r gs://unity-ads-ds-prd-users/junwon/ipython /home/jun-won/ipython '
 
 
 # Left over spark configs
