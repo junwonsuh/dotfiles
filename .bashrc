@@ -9,9 +9,9 @@ export M2_HOME=/Users/jun-won/Tools/maven/apache-maven-3.3.9
 export PATH=$PATH:$M2_HOME/bin:$GOPATH/bin:$GOROOT/bin:/usr/bin/:/usr/local/bin/:~/.local/bin:
 export GREP_OPTIONS='--color=always'
 
-export SPARK_HOME="/usr/lib/spark"
-export PYSPARK_PYTHON=/usr/bin/python
-export PYSPARK_DRIVER_PYTHON=ipython
+export SPARK_HOME=/usr/lib/spark
+export PYSPARK_PYTHON=/usr/bin/python2.7
+export PYSPARK_DRIVER_PYTHON=ipython2
 export PYTHONPATH=$PYSPARK_PYTHON:$SPARK_HOME/python/:$SPARK_HOME/python/lib/py4j-0.10.3-src.zip:$PYTHONPATH
 
 
